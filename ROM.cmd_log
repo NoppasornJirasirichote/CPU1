@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn "/home/ise/EC1/ROM.xst" -ofn "/home/ise/EC1/ROM.syr" 
+xst -intstyle ise -ifn "/home/ise/EC1/ROM.xst" -ofn "/home/ise/EC1/ROM.syr" 
+xst -intstyle ise -ifn "/home/ise/EC1/ROM.xst" -ofn "/home/ise/EC1/ROM.syr" 
+xst -intstyle ise -ifn "/home/ise/EC1/ROM.xst" -ofn "/home/ise/EC1/ROM.syr" 
+xst -intstyle ise -ifn "/home/ise/EC1/ROM.xst" -ofn "/home/ise/EC1/ROM.syr" 
+xst -intstyle ise -ifn "/home/ise/EC1/ROM.xst" -ofn "/home/ise/EC1/ROM.syr" 
+xst -intstyle ise -ifn "/home/ise/EC1/ROM.xst" -ofn "/home/ise/EC1/ROM.syr" 
+xst -intstyle ise -ifn "/home/ise/EC1/ROM.xst" -ofn "/home/ise/EC1/ROM.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim ROM.ngc ROM_synthesis.v 
+xst -intstyle ise -ifn "/home/ise/EC1/ROM.xst" -ofn "/home/ise/EC1/ROM.syr" 
+xst -intstyle ise -ifn "/home/ise/EC1/ROM.xst" -ofn "/home/ise/EC1/ROM.syr" 
+xst -intstyle ise -ifn "/home/ise/EC1/ROM.xst" -ofn "/home/ise/EC1/ROM.syr" 
+xst -intstyle ise -ifn "/home/ise/EC1/ROM.xst" -ofn "/home/ise/EC1/ROM.syr" 

@@ -1,0 +1,6 @@
+verilog work "romcpu.v"
+verilog work "PCcpu.v"
+verilog work "mux3.v"
+verilog work "ircpu.v"
+verilog work "incre.v"
+verilog work "tb_operations.v"

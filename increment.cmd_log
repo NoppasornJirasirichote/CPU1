@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/ise/EC1/increment.xst" -ofn "/home/ise/EC1/increment.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim increment.ngc increment_synthesis.v 

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/ise/ise/EC1_copy/main_ALU.xst" -ofn "/home/ise/ise/EC1_copy/main_ALU.syr" 

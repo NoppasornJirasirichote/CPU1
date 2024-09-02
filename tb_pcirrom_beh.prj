@@ -1,0 +1,8 @@
+verilog work "ROM.v"
+verilog work "PC.v"
+verilog work "mux2to1_4bits.v"
+verilog work "IR.v"
+verilog work "increment.v"
+verilog work "pcirrom.v"
+verilog work "tb_pcirrom.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

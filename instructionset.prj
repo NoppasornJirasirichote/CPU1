@@ -1,0 +1,7 @@
+verilog work "register_Answer.v"
+verilog work "registerB.v"
+verilog work "regAA.v"
+verilog work "Bmux.v"
+verilog work "Amux.v"
+verilog work "ALUmain.v"
+verilog work "instructionset.v"

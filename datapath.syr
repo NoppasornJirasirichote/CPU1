@@ -1,0 +1,735 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.00 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.00 secs
+ 
+--> 
+Reading design: datapath.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "datapath.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "datapath"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : datapath
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ise/ise/EC1_copy/romcpu.v" into library work
+Parsing module <romcpu>.
+Analyzing Verilog file "/home/ise/ise/EC1_copy/register_Answer.v" into library work
+Parsing module <register_Answer>.
+Analyzing Verilog file "/home/ise/ise/EC1_copy/registerB.v" into library work
+Parsing module <registerB>.
+Analyzing Verilog file "/home/ise/ise/EC1_copy/regAA.v" into library work
+Parsing module <regAA>.
+Analyzing Verilog file "/home/ise/ise/EC1_copy/PCcpu.v" into library work
+Parsing module <PCcpu>.
+Analyzing Verilog file "/home/ise/ise/EC1_copy/mux3.v" into library work
+Parsing module <mux3>.
+Analyzing Verilog file "/home/ise/ise/EC1_copy/ircpu.v" into library work
+Parsing module <ircpu>.
+Analyzing Verilog file "/home/ise/ise/EC1_copy/incre.v" into library work
+Parsing module <incre>.
+Analyzing Verilog file "/home/ise/ise/EC1_copy/Bmux.v" into library work
+Parsing module <Bmux>.
+Analyzing Verilog file "/home/ise/ise/EC1_copy/Amux.v" into library work
+Parsing module <Amux>.
+Analyzing Verilog file "/home/ise/ise/EC1_copy/ALUmain.v" into library work
+Parsing module <ALUmain>.
+Analyzing Verilog file "/home/ise/ise/EC1_copy/datpath.v" into library work
+Parsing module <datapath>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <datapath>.
+
+Elaborating module <Amux>.
+
+Elaborating module <Bmux>.
+
+Elaborating module <regAA>.
+
+Elaborating module <registerB>.
+
+Elaborating module <ALUmain>.
+WARNING:HDLCompiler:189 - "/home/ise/ise/EC1_copy/datpath.v" Line 52: Size mismatch in connection of port <select>. Formal port size is 2-bit while actual signal size is 1-bit.
+
+Elaborating module <register_Answer>.
+
+Elaborating module <romcpu>.
+WARNING:HDLCompiler:634 - "/home/ise/ise/EC1_copy/romcpu.v" Line 9: Net <rom[15][7]> does not have a driver.
+
+Elaborating module <ircpu>.
+
+Elaborating module <mux3>.
+
+Elaborating module <PCcpu>.
+
+Elaborating module <incre>.
+WARNING:HDLCompiler:413 - "/home/ise/ise/EC1_copy/incre.v" Line 8: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:634 - "/home/ise/ise/EC1_copy/datpath.v" Line 46: Net <A_select> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/ise/ise/EC1_copy/datpath.v" Line 47: Net <B_select> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <datapath>.
+    Related source file is "/home/ise/ise/EC1_copy/datpath.v".
+WARNING:Xst:653 - Signal <A_select> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <B_select> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <datapath> synthesized.
+
+Synthesizing Unit <Amux>.
+    Related source file is "/home/ise/ise/EC1_copy/Amux.v".
+    Summary:
+	no macro.
+Unit <Amux> synthesized.
+
+Synthesizing Unit <Bmux>.
+    Related source file is "/home/ise/ise/EC1_copy/Bmux.v".
+    Summary:
+	no macro.
+Unit <Bmux> synthesized.
+
+Synthesizing Unit <regAA>.
+    Related source file is "/home/ise/ise/EC1_copy/regAA.v".
+    Found 8-bit register for signal <op>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <regAA> synthesized.
+
+Synthesizing Unit <registerB>.
+    Related source file is "/home/ise/ise/EC1_copy/registerB.v".
+    Found 8-bit register for signal <op>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <registerB> synthesized.
+
+Synthesizing Unit <ALUmain>.
+    Related source file is "/home/ise/ise/EC1_copy/ALUmain.v".
+    Found 8-bit subtractor for signal <A[7]_B[7]_sub_4_OUT[7:0]> created at line 16.
+    Found 8-bit adder for signal <A[7]_B[7]_add_1_OUT[7:0]> created at line 12.
+    Found 8-bit 4-to-1 multiplexer for signal <op1> created at line 3.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Multiplexer(s).
+Unit <ALUmain> synthesized.
+
+Synthesizing Unit <register_Answer>.
+    Related source file is "/home/ise/ise/EC1_copy/register_Answer.v".
+    Found 8-bit register for signal <op>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <register_Answer> synthesized.
+
+Synthesizing Unit <romcpu>.
+    Related source file is "/home/ise/ise/EC1_copy/romcpu.v".
+WARNING:Xst:653 - Signal <rom<15>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <rom<14>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <rom<13>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 8-bit register for signal <Output>.
+    Found 16x8-bit Read Only RAM for signal <Address[3]_rom[15][7]_wide_mux_1_OUT>
+    WARNING:Xst:2404 -  FFs/Latches <rom<12><6><0:0>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<12><5><6:6>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<12><4><5:5>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<12><3><4:4>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<12><2><3:3>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<12><1><2:2>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<12><0><1:1>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<11><7><0:0>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<11><6><7:7>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<11><5><6:6>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<11><4><0:0>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<11><3><4:4>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<11><2><3:3>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<11><1><2:2>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<11><0><1:1>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<10><7><5:5>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<10><6><7:7>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<10><5><0:0>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<10><4><6:6>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<10><3><4:4>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<10><2><5:5>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<10><1><3:3>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<10><0><2:2>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<9><7><1:1>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<9><6><7:7>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<9><5><0:0>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<9><4><5:5>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<9><3><6:6>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<9><2><4:4>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<9><1><3:3>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<9><0><2:2>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<8><7><1:1>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<8><6><0:0>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<8><5><7:7>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<8><4><5:5>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<8><3><4:4>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<8><2><6:6>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<8><1><3:3>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<8><0><2:2>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<7><7><1:1>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<7><6><0:0>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<7><5><7:7>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<7><4><6:6>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<7><3><5:5>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<7><2><4:4>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<7><1><3:3>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<7><0><2:2>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<6><7><1:1>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<6><6><0:0>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<6><5><6:6>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<6><4><7:7>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<6><3><4:4>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<6><2><5:5>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<6><1><3:3>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<6><0><2:2>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<5><7><1:1>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<5><6><0:0>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<5><5><6:6>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<5><4><5:5>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<5><3><7:7>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<5><2><4:4>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<5><1><3:3>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<5><0><2:2>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<4><7><0:0>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<4><6><1:1>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<4><5><6:6>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<4><4><5:5>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<4><3><4:4>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<4><2><7:7>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<4><1><3:3>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<4><0><2:2>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<3><7><0:0>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<3><6><1:1>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<3><5><6:6>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<3><4><7:7>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<3><3><5:5>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<3><2><4:4>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<3><1><3:3>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<3><0><2:2>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<2><7><0:0>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<2><6><1:1>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<2><5><7:7>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<2><4><6:6>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<2><3><5:5>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<2><2><3:3>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<2><1><2:2>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<2><0><1:1>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<1><7><0:0>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<1><6><4:4>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<1><5><7:7>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<1><4><5:5>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<1><3><4:4>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<1><2><3:3>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<1><1><2:2>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<1><0><1:1>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<0><7><0:0>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<0><6><7:7>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<0><5><6:6>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<0><4><5:5>> (without init value) have a constant value of 1 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<0><3><6:6>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<0><2><3:3>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<0><1><2:2>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<0><0><1:1>> (without init value) have a constant value of 0 in block <romcpu>.
+    WARNING:Xst:2404 -  FFs/Latches <rom<12><7><4:4>> (without init value) have a constant value of 1 in block <romcpu>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <romcpu> synthesized.
+
+Synthesizing Unit <ircpu>.
+    Related source file is "/home/ise/ise/EC1_copy/ircpu.v".
+    Found 4-bit register for signal <IRpc>.
+    Found 4-bit register for signal <IRcu>.
+    Found 8-bit register for signal <IRout>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <ircpu> synthesized.
+
+Synthesizing Unit <mux3>.
+    Related source file is "/home/ise/ise/EC1_copy/mux3.v".
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_op[3]_wide_mux_0_OUT<3>> created at line 11.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_op[3]_wide_mux_0_OUT<2>> created at line 11.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_op[3]_wide_mux_0_OUT<1>> created at line 11.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_op[3]_wide_mux_0_OUT<0>> created at line 11.
+WARNING:Xst:737 - Found 1-bit latch for signal <op<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <op<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <op<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <op<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   4 Latch(s).
+	inferred   4 Multiplexer(s).
+Unit <mux3> synthesized.
+
+Synthesizing Unit <PCcpu>.
+    Related source file is "/home/ise/ise/EC1_copy/PCcpu.v".
+    Register <pcadd> equivalent to <Output> has been removed
+    Found 4-bit register for signal <Output>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <PCcpu> synthesized.
+
+Synthesizing Unit <incre>.
+    Related source file is "/home/ise/ise/EC1_copy/incre.v".
+    Found 4-bit adder for signal <op> created at line 8.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <incre> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 8-bit addsub                                          : 1
+# Registers                                            : 8
+ 4-bit register                                        : 3
+ 8-bit register                                        : 5
+# Latches                                              : 4
+ 1-bit latch                                           : 4
+# Multiplexers                                         : 9
+ 1-bit 3-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 5
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <IRpc_0> in Unit <ir> is equivalent to the following FF/Latch, which will be removed : <IRout_0> 
+INFO:Xst:2261 - The FF/Latch <IRpc_1> in Unit <ir> is equivalent to the following FF/Latch, which will be removed : <IRout_1> 
+INFO:Xst:2261 - The FF/Latch <IRpc_2> in Unit <ir> is equivalent to the following FF/Latch, which will be removed : <IRout_2> 
+INFO:Xst:2261 - The FF/Latch <IRpc_3> in Unit <ir> is equivalent to the following FF/Latch, which will be removed : <IRout_3> 
+INFO:Xst:2261 - The FF/Latch <IRcu_0> in Unit <ir> is equivalent to the following FF/Latch, which will be removed : <IRout_4> 
+INFO:Xst:2261 - The FF/Latch <IRcu_1> in Unit <ir> is equivalent to the following FF/Latch, which will be removed : <IRout_5> 
+INFO:Xst:2261 - The FF/Latch <IRcu_2> in Unit <ir> is equivalent to the following FF/Latch, which will be removed : <IRout_6> 
+INFO:Xst:2261 - The FF/Latch <IRcu_3> in Unit <ir> is equivalent to the following FF/Latch, which will be removed : <IRout_7> 
+
+Synthesizing (advanced) Unit <romcpu>.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <Output> prevents it from being combined with the RAM <Mram_Address[3]_rom[15][7]_wide_mux_1_OUT> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <Address>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_Address[3]_rom[15][7]_wide_mux_1_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+Unit <romcpu> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 8-bit addsub                                          : 1
+# Registers                                            : 52
+ Flip-Flops                                            : 52
+# Multiplexers                                         : 23
+ 1-bit 2-to-1 multiplexer                              : 16
+ 1-bit 3-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <IRpc_0> in Unit <ircpu> is equivalent to the following FF/Latch, which will be removed : <IRout_0> 
+INFO:Xst:2261 - The FF/Latch <IRpc_1> in Unit <ircpu> is equivalent to the following FF/Latch, which will be removed : <IRout_1> 
+INFO:Xst:2261 - The FF/Latch <IRpc_2> in Unit <ircpu> is equivalent to the following FF/Latch, which will be removed : <IRout_2> 
+INFO:Xst:2261 - The FF/Latch <IRpc_3> in Unit <ircpu> is equivalent to the following FF/Latch, which will be removed : <IRout_3> 
+INFO:Xst:2261 - The FF/Latch <IRcu_0> in Unit <ircpu> is equivalent to the following FF/Latch, which will be removed : <IRout_4> 
+INFO:Xst:2261 - The FF/Latch <IRcu_1> in Unit <ircpu> is equivalent to the following FF/Latch, which will be removed : <IRout_5> 
+INFO:Xst:2261 - The FF/Latch <IRcu_2> in Unit <ircpu> is equivalent to the following FF/Latch, which will be removed : <IRout_6> 
+INFO:Xst:2261 - The FF/Latch <IRcu_3> in Unit <ircpu> is equivalent to the following FF/Latch, which will be removed : <IRout_7> 
+INFO:Xst:2261 - The FF/Latch <Output_1> in Unit <romcpu> is equivalent to the following FF/Latch, which will be removed : <Output_3> 
+INFO:Xst:2261 - The FF/Latch <Output_0> in Unit <romcpu> is equivalent to the following FF/Latch, which will be removed : <Output_2> 
+
+Optimizing unit <ALUmain> ...
+
+Optimizing unit <datapath> ...
+
+Optimizing unit <mux3> ...
+
+Optimizing unit <regAA> ...
+
+Optimizing unit <registerB> ...
+
+Optimizing unit <register_Answer> ...
+
+Optimizing unit <ircpu> ...
+
+Optimizing unit <romcpu> ...
+INFO:Xst:2261 - The FF/Latch <ir/IRpc_2> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <ir/IRpc_0> 
+INFO:Xst:2261 - The FF/Latch <ir/IRpc_3> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <ir/IRpc_1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block datapath, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 40
+ Flip-Flops                                            : 40
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : datapath.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 44
+#      LUT2                        : 5
+#      LUT3                        : 9
+#      LUT4                        : 11
+#      LUT5                        : 1
+#      LUT6                        : 3
+#      MUXCY                       : 7
+#      XORCY                       : 8
+# FlipFlops/Latches                : 44
+#      FD                          : 12
+#      FDRE                        : 28
+#      LD                          : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 39
+#      IBUF                        : 27
+#      OBUF                        : 12
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              44  out of  126800     0%  
+ Number of Slice LUTs:                   29  out of  63400     0%  
+    Number used as Logic:                29  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     47
+   Number with an unused Flip Flop:       3  out of     47     6%  
+   Number with an unused LUT:            18  out of     47    38%  
+   Number of fully used LUT-FF pairs:    26  out of     47    55%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          40
+ Number of bonded IOBs:                  40  out of    210    19%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                     | Clock buffer(FF name)  | Load  |
+-----------------------------------------------------------------+------------------------+-------+
+Clk                                                              | BUFGP                  | 40    |
+muxJSM/sel[1]_GND_19_o_Mux_1_o(muxJSM/sel[1]_GND_19_o_Mux_1_o1:O)| NONE(*)(muxJSM/op_0)   | 4     |
+-----------------------------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 1.706ns (Maximum Frequency: 586.063MHz)
+   Minimum input arrival time before clock: 1.515ns
+   Maximum output required time after clock: 0.645ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 1.706ns (frequency: 586.063MHz)
+  Total number of paths / destination ports: 135 / 20
+-------------------------------------------------------------------------
+Delay:               1.706ns (Levels of Logic = 9)
+  Source:            regB/op_0 (FF)
+  Destination:       regAns/op_7 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: regB/op_0 to regAns/op_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.361   0.379  regB/op_0 (regB/op_0)
+     LUT3:I1->O            1   0.097   0.000  ALU/Mmux_op11_rs_lut<0> (ALU/Mmux_op11_rs_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  ALU/Mmux_op11_rs_cy<0> (ALU/Mmux_op11_rs_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  ALU/Mmux_op11_rs_cy<1> (ALU/Mmux_op11_rs_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  ALU/Mmux_op11_rs_cy<2> (ALU/Mmux_op11_rs_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  ALU/Mmux_op11_rs_cy<3> (ALU/Mmux_op11_rs_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  ALU/Mmux_op11_rs_cy<4> (ALU/Mmux_op11_rs_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  ALU/Mmux_op11_rs_cy<5> (ALU/Mmux_op11_rs_cy<5>)
+     MUXCY:CI->O           0   0.023   0.000  ALU/Mmux_op11_rs_cy<6> (ALU/Mmux_op11_rs_cy<6>)
+     XORCY:CI->O           1   0.370   0.000  ALU/Mmux_op11_rs_xor<7> (ALUout<7>)
+     FDRE:D                    0.008          regAns/op_7
+    ----------------------------------------
+    Total                      1.706ns (1.327ns logic, 0.379ns route)
+                                       (77.8% logic, 22.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 152 / 86
+-------------------------------------------------------------------------
+Offset:              1.515ns (Levels of Logic = 10)
+  Source:            select_mode (PAD)
+  Destination:       regAns/op_7 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: select_mode to regAns/op_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   0.001   0.548  select_mode_IBUF (select_mode_IBUF)
+     LUT3:I0->O            1   0.097   0.000  ALU/Mmux_op11_rs_lut<0> (ALU/Mmux_op11_rs_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  ALU/Mmux_op11_rs_cy<0> (ALU/Mmux_op11_rs_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  ALU/Mmux_op11_rs_cy<1> (ALU/Mmux_op11_rs_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  ALU/Mmux_op11_rs_cy<2> (ALU/Mmux_op11_rs_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  ALU/Mmux_op11_rs_cy<3> (ALU/Mmux_op11_rs_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  ALU/Mmux_op11_rs_cy<4> (ALU/Mmux_op11_rs_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  ALU/Mmux_op11_rs_cy<5> (ALU/Mmux_op11_rs_cy<5>)
+     MUXCY:CI->O           0   0.023   0.000  ALU/Mmux_op11_rs_cy<6> (ALU/Mmux_op11_rs_cy<6>)
+     XORCY:CI->O           1   0.370   0.000  ALU/Mmux_op11_rs_xor<7> (ALUout<7>)
+     FDRE:D                    0.008          regAns/op_7
+    ----------------------------------------
+    Total                      1.515ns (0.967ns logic, 0.548ns route)
+                                       (63.8% logic, 36.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'muxJSM/sel[1]_GND_19_o_Mux_1_o'
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Offset:              0.810ns (Levels of Logic = 2)
+  Source:            JSM<1> (PAD)
+  Destination:       muxJSM/op_1 (LATCH)
+  Destination Clock: muxJSM/sel[1]_GND_19_o_Mux_1_o falling
+
+  Data Path: JSM<1> to muxJSM/op_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.001   0.712  JSM_1_IBUF (JSM_1_IBUF)
+     LUT6:I0->O            1   0.097   0.000  muxJSM/Mmux_sel[1]_op[3]_wide_mux_0_OUT<1>11 (muxJSM/sel[1]_op[3]_wide_mux_0_OUT<1>)
+     LD:D                     -0.028          muxJSM/op_1
+    ----------------------------------------
+    Total                      0.810ns (0.098ns logic, 0.712ns route)
+                                       (12.1% logic, 87.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              0.645ns (Levels of Logic = 1)
+  Source:            ir/IRcu_3 (FF)
+  Destination:       IRCU<3> (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: ir/IRcu_3 to IRCU<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.361   0.283  ir/IRcu_3 (ir/IRcu_3)
+     OBUF:I->O                 0.000          IRCU_3_OBUF (IRCU<3>)
+    ----------------------------------------
+    Total                      0.645ns (0.361ns logic, 0.283ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+Clk                           |    1.706|         |         |         |
+muxJSM/sel[1]_GND_19_o_Mux_1_o|         |    0.759|         |         |
+------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock muxJSM/sel[1]_GND_19_o_Mux_1_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |         |         |    1.487|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 3.91 secs
+ 
+--> 
+
+
+Total memory usage is 601616 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  118 (   0 filtered)
+Number of infos    :   24 (   0 filtered)
+

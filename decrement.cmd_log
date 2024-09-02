@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/ise/EC1/decrement.xst" -ofn "/home/ise/EC1/decrement.syr" 

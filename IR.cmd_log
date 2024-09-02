@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/ise/EC1/IR.xst" -ofn "/home/ise/EC1/IR.syr" 
+xst -intstyle ise -ifn "/home/ise/EC1/IR.xst" -ofn "/home/ise/EC1/IR.syr" 
